@@ -1,0 +1,98 @@
+/* ===================================================
+   DARI TROCC — Design Tokens
+   Palette built directly from the logo: Teal + Ivory
+   Logo teal (#3DBFAA) is the primary brand color.
+   =================================================== */
+
+:root {
+  /* === BACKGROUNDS (warm ivory — lets the teal logo breathe) === */
+  --color-bg:            #F9F7F2;   /* Warm Ivory — main page background */
+  --color-bg-alt:        #EDF7F5;   /* Teal Mist — alternate sections */
+  --color-cream:         #FFFFFF;   /* Pure White — product cards */
+  --color-beige:         #C5DFDB;   /* Soft Teal Border — dividers & borders */
+
+  /* === TEXT (teal-toned, not brown) === */
+  --color-warm-brown:    #567870;   /* Teal Slate — body text */
+  --color-dark-brown:    #1C3D38;   /* Deep Teal — headings, footer bg */
+
+  /* === PRIMARY BRAND COLOR (logo teal) === */
+  --color-gold:          #3DBFAA;   /* Logo Teal — all CTAs & buttons */
+  --color-gold-hover:    #2EA594;   /* Logo Teal Deep — button hover bg */
+  --color-gold-light:    #D0EBE8;   /* Logo Teal Tint — badges, selection */
+
+  /* === SECONDARY / ALIAS === */
+  --color-teal:          #3DBFAA;   /* Logo Teal — accent color */
+  --color-teal-hover:    #2EA594;   /* Logo Teal hover */
+  --color-teal-light:    #EDF7F5;   /* Logo Teal lightest */
+
+  /* === WARM COMPLEMENT (amber — adds life against teal) === */
+  --color-terracotta:    #C4864A;   /* Warm Amber — hover states */
+  --color-bronze:        #7A5C3A;   /* Bronze — icons, meta, small text */
+
+  /* === NEUTRALS === */
+  --color-white:         #FFFFFF;
+  --color-black:         #1A1A1A;
+  --color-gray:          #8A9E9A;   /* Teal-tinted gray */
+  --color-overlay:       rgba(28, 61, 56, 0.45);   /* Deep teal overlay */
+
+  /* === TYPOGRAPHY === */
+  --font-heading:  'Playfair Display', 'Georgia', serif;
+  --font-body:     'Poppins', 'Segoe UI', sans-serif;
+  --font-accent:   'Cormorant Garamond', serif;
+  --font-arabic:   'Noto Sans Arabic', sans-serif;
+
+  --fs-hero:     clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h1:       clamp(2rem, 3.5vw, 3rem);
+  --fs-h2:       clamp(1.5rem, 2.5vw, 2.25rem);
+  --fs-h3:       clamp(1.15rem, 2vw, 1.5rem);
+  --fs-body:     1rem;
+  --fs-small:    0.875rem;
+  --fs-tiny:     0.75rem;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --lh-tight:    1.2;
+  --lh-normal:   1.6;
+  --lh-loose:    1.8;
+
+  --ls-wide:     0.08em;
+  --ls-wider:    0.15em;
+
+  /* === SPACING === */
+  --space-xs:    0.5rem;
+  --space-sm:    1rem;
+  --space-md:    1.5rem;
+  --space-lg:    2.5rem;
+  --space-xl:    4rem;
+  --space-2xl:   6rem;
+  --space-3xl:   8rem;
+
+  /* === BORDERS & RADIUS === */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-full: 9999px;
+
+  --border-light: 1px solid var(--color-beige);
+
+  /* === SHADOWS (teal-toned) === */
+  --shadow-sm:   0 2px 8px rgba(28, 61, 56, 0.07);
+  --shadow-md:   0 4px 20px rgba(28, 61, 56, 0.10);
+  --shadow-lg:   0 8px 40px rgba(28, 61, 56, 0.14);
+  --shadow-gold: 0 4px 15px rgba(61, 191, 170, 0.30);   /* Teal glow */
+
+  /* === TRANSITIONS === */
+  --transition-fast:   0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* === LAYOUT === */
+  --container-max:    1280px;
+  --container-narrow: 960px;
+  --container-wide:   1440px;
+  --header-height:    80px;
+}

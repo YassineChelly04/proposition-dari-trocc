@@ -1,0 +1,380 @@
+/* ===================================================
+   DARI TROCC — Responsive Styles
+   =================================================== */
+
+/* === Mobile: up to 767px === */
+@media (max-width: 767px) {
+
+  /* Header */
+  .header-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: block;
+    right: -100%;
+  }
+
+  .mobile-overlay {
+    display: block;
+    pointer-events: none;
+  }
+
+  .mobile-overlay.is-visible {
+    pointer-events: auto;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* Collections Grid */
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .collection-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Best Sellers */
+  .bestsellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  /* Brand Story */
+  .brand-story {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-story__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .brand-story__content {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  /* Instagram Grid */
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .newsletter-form input {
+    border-right: 1.5px solid var(--color-beige);
+    border-radius: var(--radius-full);
+  }
+
+  .newsletter-form button {
+    border-radius: var(--radius-full);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
+  /* Shop Grid */
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  /* Filter Bar */
+  .filter-bar__inner {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: stretch;
+  }
+
+  .filter-pills {
+    padding-bottom: 4px;
+  }
+
+  .pill {
+    padding: 6px 16px;
+    font-size: var(--fs-tiny);
+    white-space: nowrap;
+  }
+
+  /* Page Banner */
+  .page-banner {
+    height: 30vh;
+    min-height: 200px;
+  }
+
+  .page-banner__title {
+    font-size: var(--fs-h2);
+  }
+
+  /* Product Layout */
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .product-gallery {
+    position: static;
+  }
+
+  .product-gallery__thumbs {
+    gap: 6px;
+  }
+
+  .product-gallery__thumb {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-info__name {
+    font-size: var(--fs-h2);
+  }
+
+  .product-info__price {
+    font-size: 1.4rem;
+  }
+
+  .product-actions__row {
+    flex-direction: column;
+  }
+
+  .product-actions .btn {
+    width: 100%;
+  }
+
+  .qty-selector {
+    align-self: flex-start;
+  }
+
+  /* Related Products */
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  /* Cart Layout */
+  .cart-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .cart-item {
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-sm);
+  }
+
+  .cart-item__image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item__price {
+    grid-column: 2;
+  }
+
+  .cart-item__remove {
+    position: absolute;
+    right: var(--space-sm);
+    top: var(--space-sm);
+  }
+
+  .cart-item {
+    position: relative;
+    padding-right: var(--space-xl);
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  /* Checkout form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Checkout steps */
+  .checkout-steps {
+    gap: 4px;
+  }
+
+  .checkout-step span:not(.checkout-step__number) {
+    display: none;
+  }
+
+  .step-line {
+    width: 24px;
+  }
+}
+
+/* === Tablet: 768px to 1023px === */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Header */
+  .header-nav {
+    gap: var(--space-md);
+  }
+
+  .header-nav a {
+    font-size: var(--fs-tiny);
+  }
+
+  /* Collections */
+  .collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  /* Best Sellers */
+  .bestsellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Brand Story */
+  .brand-story {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-story__image {
+    aspect-ratio: 21 / 9;
+  }
+
+  .brand-story__content {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  /* Instagram */
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* Shop Grid */
+  .shop-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Product */
+  .product-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Cart */
+  .cart-layout {
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-lg);
+  }
+}
+
+/* === Desktop: 1024px+ === */
+@media (min-width: 1024px) {
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .mobile-overlay {
+    display: none !important;
+  }
+
+  /* Collections */
+  .collections-grid {
+    gap: var(--space-md);
+  }
+
+  /* Best Sellers */
+  .bestsellers-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Instagram */
+  .instagram-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+
+  /* Shop Grid */
+  .shop-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Product */
+  .product-layout {
+    grid-template-columns: 55% 45%;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Cart */
+  .cart-layout {
+    grid-template-columns: 1fr 380px;
+  }
+}
+
+/* === Large Desktop: 1440px+ === */
+@media (min-width: 1440px) {
+
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  .hero__title {
+    font-size: 4.5rem;
+  }
+}

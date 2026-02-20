@@ -1,0 +1,221 @@
+/* ===================================================
+   DARI TROCC — Product Page Styles
+   =================================================== */
+
+/* === Product Layout === */
+.product-layout {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* === Gallery === */
+.product-gallery {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-md));
+}
+
+.product-gallery__main {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-cream);
+  margin-bottom: var(--space-sm);
+  cursor: zoom-in;
+  position: relative;
+}
+
+.product-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-gallery__main:hover img {
+  transform: scale(1.15);
+}
+
+.product-gallery__thumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.product-gallery__thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast);
+  opacity: 0.6;
+  transition: opacity var(--transition-fast), border-color var(--transition-fast);
+}
+
+.product-gallery__thumb.active,
+.product-gallery__thumb:hover {
+  border-color: var(--color-gold);
+  opacity: 1;
+}
+
+.product-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Product Info === */
+.product-info {
+  padding: var(--space-sm) 0;
+}
+
+.product-info__category {
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-teal);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+.product-info__name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  color: var(--color-dark-brown);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-xs);
+}
+
+.product-info__name-ar {
+  font-family: var(--font-arabic);
+  font-size: 1rem;
+  color: var(--color-gray);
+  direction: rtl;
+  margin-bottom: var(--space-md);
+}
+
+.product-info__price {
+  font-size: 1.75rem;
+  color: var(--color-gold);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-md);
+}
+
+.product-info__description {
+  line-height: var(--lh-loose);
+  color: var(--color-warm-brown);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--border-light);
+}
+
+/* === Quantity & Actions === */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.product-actions__row {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.product-actions .btn {
+  flex: 1;
+}
+
+.product-actions .btn-whatsapp svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* === Accordion / Details === */
+.product-accordion {
+  border-top: var(--border-light);
+}
+
+.accordion-item {
+  border-bottom: var(--border-light);
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  color: var(--color-dark-brown);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  color: var(--color-gold);
+}
+
+.accordion-icon {
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.accordion-item.is-open .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.accordion-body__inner {
+  padding: 0 0 var(--space-md) 0;
+  color: var(--color-warm-brown);
+  line-height: var(--lh-loose);
+  font-size: var(--fs-small);
+}
+
+.accordion-item.is-open .accordion-body {
+  max-height: 500px;
+}
+
+/* === Details Table === */
+.details-table {
+  width: 100%;
+}
+
+.details-table tr {
+  border-bottom: 1px solid var(--color-cream);
+}
+
+.details-table td {
+  padding: 8px 0;
+  font-size: var(--fs-small);
+}
+
+.details-table td:first-child {
+  color: var(--color-dark-brown);
+  font-weight: var(--fw-medium);
+  width: 40%;
+}
+
+/* === Related Products === */
+.related-products {
+  background: var(--color-bg-alt);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}

@@ -1,0 +1,100 @@
+/* ===================================================
+   DARI TROCC — Animations
+   =================================================== */
+
+/* === Fade In Up (Scroll Reveal) === */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-1 { transition-delay: 0.1s; }
+.fade-up-delay-2 { transition-delay: 0.2s; }
+.fade-up-delay-3 { transition-delay: 0.3s; }
+.fade-up-delay-4 { transition-delay: 0.4s; }
+
+/* === Scale In === */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* === Hero Parallax === */
+.parallax-bg {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* === Scroll Down Indicator === */
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.scroll-indicator {
+  animation: bounceDown 2s ease-in-out infinite;
+}
+
+/* === Checkmark Drawing === */
+@keyframes checkDraw {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes circleGrow {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.check-animation circle {
+  animation: circleGrow 0.5s ease forwards;
+}
+
+.check-animation path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: checkDraw 0.5s ease forwards 0.4s;
+}
+
+/* === Image Hover Zoom === */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform var(--transition-slow);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* === Button Press === */
+.btn-press:active {
+  transform: translateY(0) scale(0.97) !important;
+}
+
+/* === Slide In from Right (Mobile Nav) === */
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* === Pulse for badges === */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}

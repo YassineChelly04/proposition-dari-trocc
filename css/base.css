@@ -1,0 +1,78 @@
+/* ===================================================
+   DARI TROCC — Base Styles & Typography
+   =================================================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-warm-brown);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-dark-brown);
+  font-weight: var(--fw-semibold);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+.text-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+}
+
+.text-arabic {
+  font-family: var(--font-arabic);
+  direction: rtl;
+}
+
+.text-gold { color: var(--color-gold); }
+.text-teal { color: var(--color-teal); }
+.text-small { font-size: var(--fs-small); }
+.text-tiny { font-size: var(--fs-tiny); }
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+}
+.text-center { text-align: center; }
+
+/* === Section Titles === */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  color: var(--color-dark-brown);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.section-subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.125rem;
+  color: var(--color-warm-brown);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-gold);
+  margin: var(--space-sm) auto var(--space-md);
+  border: none;
+}
+
+/* === Links === */
+a:hover {
+  color: var(--color-terracotta);
+}
+
+/* === Selection === */
+::selection {
+  background: var(--color-gold-light);
+  color: var(--color-dark-brown);
+}
